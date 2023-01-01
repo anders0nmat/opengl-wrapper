@@ -1,8 +1,13 @@
 import SGLOpenGL
 
-public class OGLShader {
+public class GLShader {
 	public enum ShaderType: GLenum {
-		case vertex = 4
+		case vertex = 0x8B31
+		case tessControl = 0x8E88
+		case tessEvaluation = 0x8E87
+		case geometry = 0x8DD9
+		case fragment = 0x8B30
+		case compute = 0x91B9
 	}
 
 	public internal(set) var id: GLuint
