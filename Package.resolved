@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "opengl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftGL/OpenGL.git",
+      "state" : {
+        "revision" : "70b765437206a2b8b45c373bb70abbeb61004325",
+        "version" : "3.1.1"
+      }
+    }
+  ],
+  "version" : 2
+}
