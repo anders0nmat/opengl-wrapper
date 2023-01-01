@@ -1,13 +1,13 @@
 import SGLOpenGL
 
-class OGLShader {
+public class OGLShader {
 	public enum ShaderType: GLenum {
 		case vertex = 4
 	}
 
 	public internal(set) var id: GLuint
 
-	init() {
+	public init() {
 		self.id = glCreateProgram()
 	}
 
@@ -15,7 +15,7 @@ class OGLShader {
 		glDeleteProgram(self.id)
 	}
 
-	func attachShader(type: ShaderType, source: String) throws {
+	public func attachShader(type: ShaderType, source: String) throws {
 		let shader: GLuint = glCreateShader(type.rawValue)
 
 		source.withCString {
@@ -37,7 +37,7 @@ class OGLShader {
 		glDeleteShader(shader)
 	}
 
-	func linkProgram() throws {
+	public func linkProgram() throws {
 		glLinkProgram(id)
 
 		var success: GLint = 0
@@ -49,7 +49,7 @@ class OGLShader {
 		}
 	}
 
-	func use() {
+	public func use() {
 		glUseProgram(id)
 	}
 }
